@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Appointment</title>
+    <style>
+        .table-appointment{
+            width: 500px;
+        }
+        .cell-head{
+            padding: 5px;
+            background-color:#a8b4ff;
+        }
+        .cell-date{
+            width:100px;
+            padding: 5px;
+            background-color:#c9ffa8;
+        }
+        .cell-appointment{
+            padding: 5px;
+            background-color:#feff9d;
+        }
+        .appointment-form table{
+            padding: 5px;
+            background-color: #ffaa8c;
+            width: 500px;
+        }
+        .radius{
+            border-top-left-radius: 7px;
+            border-top-right-radius: 7px;
+        }
+        .hide{
+            display: none;
+        }
+    </style>
+    <script src="main.js"></script>
+</head>
+<body>
+<h1><span id="start">April 01, 2017</span> to <span id="end">April 31, 2017</span></h1>
+    <table class="table-appointment" id="table-appointment">
+        <tr>
+            <td class="cell-head">Date</td>
+            <td class="cell-head">Appointment</td>
+        </tr>
+        <tr>
+            <td class="cell-date">2010-08-25</td>
+            <td class="cell-appointment">XXX</td>
+        </tr>
+        <tr>
+            <td class="cell-date">2010-08-26</td>
+            <td class="cell-appointment"></td>
+        </tr>
+        <tr>
+            <td class="cell-date">2010-08-27</td>
+            <td class="cell-appointment">YYY</td>
+        </tr>
+    </table>
+    <div id="message">&nbsp;</div>
+    <form name="appointment-form" id="appointment-form" class="appointment-form">
+        <table width="100">
+            <tr>
+                <td>Date:</td>
+                <td>
+                    <select name="date" id="date" class="radius">
+                        <option value="2010-08-25">2010-08-25</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Name:</td>
+                <td>
+                    <input type="text" name="name" id="name" maxlength="50" class="radius">
+                </td>
+            </tr>
+            <tr>
+                <td>Email:</td>
+                <td>
+                    <input type="text" name="email" id="email" maxlength="50" class="radius">
+                </td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td><input type="button" name="submit" id="submit" value="Add appointment" onclick="saveAppointment()"></td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td><span id="spin" class="hide">Adding Appointment...</span></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
